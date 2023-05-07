@@ -1,22 +1,8 @@
 import React from "react"
 import CorazartGif from "../assets/gif/corazart.gif"
-import animationData from "../assets/lottie/homeAnimation.json"
 import { InstagramIcon } from "../assets/svg/instagram"
-import { useGifState } from "../hooks/useGifState"
-import Lottie from "react-lottie"
 
 export const Home = () => {
-  const { isMenuOpened, setIsMenuOpened } = useGifState()
-
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
-    }
-  }
-
   return (
     <div className="h-[100vh] w-full flex justify-start items-center ">
       <a
@@ -30,7 +16,6 @@ export const Home = () => {
       </a>
       <div className="w-full h-full lg:h-[100vh]">
         <img src={CorazartGif} alt="CorazartGif" />
-        {/* <Lottie options={defaultOptions} isStopped={false} isPaused={false} /> */}
       </div>
     </div>
   )
